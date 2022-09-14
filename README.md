@@ -44,7 +44,7 @@ Deck: 52 cards
 Card: Face and Suit
 What other objects do i need?
 
-DELETE BEFORE COMMIT OR ADD IT TO STUDENT FILE
+OPTIONAL DELETE BEFORE COMMIT OR ADD IT TO STUDENT FILE
 Some things to Remember:
 
 https://www.justsajid.com/skills/csharp/objects-everything-is-an-object-in-c/
@@ -116,7 +116,7 @@ Card
 Properties:
 Methods:
 
-END OF DELETE BEFORE COMMIT OR ADD IT TO STUDENT FILE
+END OF OPTIONAL DELETE BEFORE COMMIT OR ADD IT TO STUDENT FILE
 
 ## States/Properties:
 
