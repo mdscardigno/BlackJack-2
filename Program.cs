@@ -64,21 +64,32 @@ namespace Blackjack
                 //     deck[rightIndex] = leftCard
                 deck[rightIndex] = leftCard;
                 //     deck[leftIndex] = rightCard
-                deck[leftIndex] = leftCard;
+                deck[leftIndex] = rightCard;
             }
             // Console.WriteLine(deck.Count);
             foreach (var card in deck)
             {
                 Console.WriteLine(card);//because I have the ToString()
-                                        //But if we didnt have the ToString()
+                                        //But if we didn't have the ToString()
                                         // Console.WriteLine($"The {card.Face} of {card.Suit}");
             };
 
             //Create a player hand
             var player = new Hand();
+
             //Create a dealer hand
             var dealer = new Hand();
-            //Ask the deck for a card and place it in the player hand
+            //Ask the deck for a card and place it in the player hand (and may mean two steps)
+            //-the card is equal the 0th index of the deck
+            var firstPlayerCard = deck[0];
+            Console.WriteLine("Firs player card: " + firstPlayerCard);
+            //-remove that card from the deck list so we don't keep dealing it
+            deck.Remove(firstPlayerCard);
+            Console.WriteLine(deck.Count);
+            //-call the 'add card' behavior of the hand and pass it this card
+            player.AddCard(firstPlayerCard);
+            // Console.WriteLine(player.CurrentCards.Count);
+
             //Ask the deck for a card and place it in the player hand
             //Ask the deck for a card and place it in the dealer hand
             //Ask the deck for a card and place it in the dealer hand
