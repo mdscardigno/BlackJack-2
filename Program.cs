@@ -75,7 +75,9 @@ namespace Blackjack
             };
 
             //Create a player hand
+            var player = new Hand();
             //Create a dealer hand
+            var dealer = new Hand();
             //Ask the deck for a card and place it in the player hand
             //Ask the deck for a card and place it in the player hand
             //Ask the deck for a card and place it in the dealer hand
