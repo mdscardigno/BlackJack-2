@@ -16,12 +16,12 @@ Faces: "1", "2", "3", "4", "5", "6", "7". "8", "9", "10", "Jack", "Queen" and "K
 7-If player chooses to hit, the player is dealt another card.
 8-If player chooses to stand, the playerHandCardsValue is unchanged.
 
--Next, the dealer reveals its hand and is given the choice to choose between the two options: a)hit b)stand.
--If dealer hits, the playerHandCardsValue is updated.
+9-Next, the dealer reveals its hand and is given the choice to choose between the two options: a)hit b)stand.
+10-If dealer hits, the playerHandCardsValue is updated.
 
--If dealer stands, playerHandCardsValue is unchanged.
--The two handCardsValues (playerHandCardsValue > dealerHandCardsValue or playerHandCardsValue < dealerHandCardsValue) are compared to see who is closer to 21 and therefore ends up being the winner.
--If there is a tide or both the dealer and the player have the same handCardsValue (playerHandCardsValue == dealerHandCardsValue), dealer wins.
+11-If dealer stands, playerHandCardsValue is unchanged.
+12-The two handCardsValues (playerHandCardsValue > dealerHandCardsValue or playerHandCardsValue < dealerHandCardsValue) are compared to see who is closer to 21 and therefore ends up being the winner.
+13-If there is a tide or both the dealer and the player have the same handCardsValue (playerHandCardsValue == dealerHandCardsValue), dealer wins.
 
 ## [E]xamples:
 
