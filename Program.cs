@@ -66,6 +66,14 @@ namespace Blackjack
                 //     deck[leftIndex] = rightCard
                 deck[leftIndex] = leftCard;
             }
+            // Console.WriteLine(deck.Count);
+            foreach (var card in deck)
+            {
+                Console.WriteLine(card);//because I have the ToString()
+                                        //But if we didnt have the ToString()
+                                        // Console.WriteLine($"The {card.Face} of {card.Suit}");
+            };
+
             //Create a player hand
             //Create a dealer hand
             //Ask the deck for a card and place it in the player hand
