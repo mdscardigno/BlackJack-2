@@ -144,17 +144,22 @@ namespace Blackjack
             //     Console.WriteLine();
             // }//end of foreach
             //using for loop
-            for (var index = 0; index < player.CurrentCards.Count; index++)
-            {
-                var card = player.CurrentCards[index];
-                Console.Write(card);
-                //printing all the cards except the last card of the list
-                if (index != player.CurrentCards.Count - 1)
-                {
-                    Console.Write(", ");
-                }
-            }
-            Console.WriteLine();
+            // for (var index = 0; index < player.CurrentCards.Count; index++)
+            // {
+            //     var card = player.CurrentCards[index];
+            //     Console.Write(card);
+            //     //printing all the cards except the last card of the list
+            //     if (index != player.CurrentCards.Count - 1)
+            //     {
+            //         Console.Write(", ");
+            //     }
+            // }//end of for loop
+            // Console.WriteLine();
+            // Console.WriteLine();
+
+            //another way to do this
+            Console.WriteLine(String.Join(", ", player.CurrentCards));
+
             //     for every card, printout the to the user the description of the card
             //If they have 'Busted' (hand TotalValue is > 27), then go to step 15.
 
