@@ -55,6 +55,7 @@ namespace BlackJack
             }
         }
         //returns a string with the card
+        //teaching the card how to turn itself into a string so I can console.write it to the console
         public override string ToString()
         {
             return $"The {Face} of {Suit}";

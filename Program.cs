@@ -42,6 +42,7 @@ namespace Blackjack
                     };
                     //Add that card to the list of cards
                     //Go to the card and loop again
+                    Console.WriteLine(newCard);
                 }
                 //Go to the next suit and loop again
             }
