@@ -47,6 +47,7 @@ namespace Blackjack
             }
             //Ask the deck to make a new shuffled 52 cards
 
+            //FISHER YATES ALGORITHM 
             // numberOfCards = length of our deck
             var numberOfCards = deck.Count;
 
@@ -114,6 +115,7 @@ namespace Blackjack
             //*****End of old way of adding cards to the player
 
             //Ask the deck for a card and place it in the dealer hand
+            //Ask the deck for a card and place it in the dealer hand
             for (var numberOfCardsToDeal = 0; numberOfCardsToDeal < 2; numberOfCardsToDeal++)
             {
                 var card = deck[0];
@@ -123,18 +125,43 @@ namespace Blackjack
                 Console.WriteLine(deck.Count);
                 //-call the 'add card' behavior of the hand and pass it this card
                 dealer.AddCard(card);
-                Console.WriteLine(dealer.CurrentCards.Count);
+                // Console.WriteLine(dealer.CurrentCards.Count);
+            }
+            // Console.WriteLine();
+
+            //Show the player the cards in their hand and the TotalValue of their Hand
+            //Loop through the list of cards in the player's hand
+            Console.WriteLine("Player, your cards are: ");
+            // //using foreach
+            // foreach (var card in player.CurrentCards)
+            // {
+            //     Console.Write(card);
+            //     //when we get dot this dot this dot this, it is an indication we may need a method
+            //     if (card != player.CurrentCards[player.CurrentCards.Count - 1])
+            //     {
+            //         Console.Write(", ");
+            //     }
+            //     Console.WriteLine();
+            // }//end of foreach
+            //using for loop
+            for (var index = 0; index < player.CurrentCards.Count; index++)
+            {
+                var card = player.CurrentCards[index];
+                Console.Write(card);
+                //printing all the cards except the last card of the list
+                if (index != player.CurrentCards.Count - 1)
+                {
+                    Console.Write(", ");
+                }
             }
             Console.WriteLine();
-            //Ask the deck for a card and place it in the dealer hand
-            //Show the plater the cards in their hand and the TotalValue of their Hand
+            //     for every card, printout the to the user the description of the card
             //If they have 'Busted' (hand TotalValue is > 27), then go to step 15.
+
             //Ask the player if they want to HIT or STAND
+
             //If HIT 
-
-            //FISHER YATES ALGORITHM 
-
-
+            //If STAND
 
         }
         static void DisplayGreeting()
