@@ -142,12 +142,16 @@ Properties: Properties: A list of 52 cards
 Make an empty list of cards and call it 'deck'.
 var deck = new Deck()
 -We have the player hand.
+
 var playerHand = new Hand();
 -We have the dealer hand.
+
 var dealerHand = new Hand();
 -dealer deals a card from the deck to the player and add it to the playerHand.
+
 The card is equal to the 0th index of the deck list
 -dealer deals a card to him/herself and adds it to his hand dealerHand twice.
+
 -if their hand value is over 21, they busted.
 -if their hand is less or equal to 17, provide options to hit or stand.
 
@@ -159,8 +163,24 @@ The card is equal to the 0th index of the deck list
   shuffleDeckOfCards (instead of shuffle):
 
 Card
-Properties:
-Methods:
+Properties: The face of the card. The suit of the card.
+Methods: Value of the card based on a table bellow:
+
+| Face  | Value |
+| ----- | ----- |
+| 2     | 2     |
+| 3     | 3     |
+| 4     | 4     |
+| 5     | 5     |
+| 6     | 6     |
+| 7     | 7     |
+| 8     | 8     |
+| 9     | 9     |
+| 10    | 10    |
+| Jack  | 10    |
+| Queen | 10    |
+| King  | 10    |
+| Ace   | 11    |
 
 END OF OPTIONAL DELETE BEFORE COMMIT OR ADD IT TO STUDENT FILE
 
