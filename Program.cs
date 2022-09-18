@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BlackJack;
 
 namespace Blackjack
 {
@@ -10,7 +11,8 @@ namespace Blackjack
             //Welcome message and description about the game.
             DisplayGreeting();
 
-            //Make a list of cards
+            //Make a list of cards - give it a name of 'deck'
+            var deck = new List<Card>();
             //Suits is a list of "Club", "Diamond", "Heart", or "Spade"
             //Faces is a list of 2,3,4,5,6,7,8,9,10,Jack. Queen, King or Ace.
 
@@ -25,13 +27,13 @@ namespace Blackjack
             //}
 
         }
-
+        static void DisplayGreeting()
+        {
+            Console.WriteLine("🂡 Welcome to Blackjack. \nThe first player to come closer to 21 or at 21 wins! Those who go over 21 loose. 🃁");
+            Console.WriteLine("Press any key to play.");
+            string pressToStartPlaying = Console.ReadLine();
+        }
     }
 
-    static void DisplayGreeting()
-    {
-        Console.WriteLine("🂡 Welcome to Blackjack. \nThe first player to come closer to 21 or at 21 wins! Those who go over 21 loose. 🃁");
-        Console.WriteLine("Press any key to play.");
-        string pressToStartPlaying = Console.ReadLine();
-    }
 }
+
