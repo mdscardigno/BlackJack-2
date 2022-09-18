@@ -91,6 +91,11 @@ namespace Blackjack
             // Console.WriteLine(player.CurrentCards.Count);
 
             //Ask the deck for a card and place it in the player hand
+            var secondPlayerCard = deck[0];
+            Console.WriteLine("Second player card: " + secondPlayerCard);
+            deck.Remove(secondPlayerCard);
+            player.AddCard(secondPlayerCard);
+            Console.WriteLine(player.CurrentCards.Count);
             //Ask the deck for a card and place it in the dealer hand
             //Ask the deck for a card and place it in the dealer hand
             //Show the plater the cards in their hand and the TotalValue of their Hand
