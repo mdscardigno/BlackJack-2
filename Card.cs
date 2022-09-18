@@ -5,6 +5,7 @@ namespace BlackJack
 {
     public class Card
     {
+        //
         //initialize
         //a card has a face, a suit and a value
         public string Face { get; set; }
