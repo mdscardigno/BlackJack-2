@@ -81,22 +81,51 @@ namespace Blackjack
             var dealer = new Hand();
             //Ask the deck for a card and place it in the player hand (and may mean two steps)
             //-the card is equal the 0th index of the deck
-            var firstPlayerCard = deck[0];
-            Console.WriteLine("Firs player card: " + firstPlayerCard);
-            //-remove that card from the deck list so we don't keep dealing it
-            deck.Remove(firstPlayerCard);
-            Console.WriteLine(deck.Count);
-            //-call the 'add card' behavior of the hand and pass it this card
-            player.AddCard(firstPlayerCard);
-            // Console.WriteLine(player.CurrentCards.Count);
+
+            //refactor
+            for (var numberOfCardsToDeal = 0; numberOfCardsToDeal < 2; numberOfCardsToDeal++)
+            {
+                var card = deck[0];
+                Console.WriteLine("Firs player card: " + card);
+                //-remove that card from the deck list so we don't keep dealing it
+                deck.Remove(card);
+                Console.WriteLine(deck.Count);
+                //-call the 'add card' behavior of the hand and pass it this card
+                player.AddCard(card);
+                Console.WriteLine(player.CurrentCards.Count);
+            }
+
+            //******Start of old way of adding cards to the player
+            // var firstPlayerCard = deck[0];
+            // Console.WriteLine("Firs player card: " + firstPlayerCard);
+            // //-remove that card from the deck list so we don't keep dealing it
+            // deck.Remove(firstPlayerCard);
+            // Console.WriteLine(deck.Count);
+            // //-call the 'add card' behavior of the hand and pass it this card
+            // player.AddCard(firstPlayerCard);
+            // // Console.WriteLine(player.CurrentCards.Count);
 
             //Ask the deck for a card and place it in the player hand
-            var secondPlayerCard = deck[0];
-            Console.WriteLine("Second player card: " + secondPlayerCard);
-            deck.Remove(secondPlayerCard);
-            player.AddCard(secondPlayerCard);
-            Console.WriteLine(player.CurrentCards.Count);
+            // var secondPlayerCard = deck[0];
+            // Console.WriteLine("Second player card: " + secondPlayerCard);
+            // deck.Remove(secondPlayerCard);
+            // player.AddCard(secondPlayerCard);
+            // Console.WriteLine(player.CurrentCards.Count);
+            //*****End of old way of adding cards to the player
+
             //Ask the deck for a card and place it in the dealer hand
+            for (var numberOfCardsToDeal = 0; numberOfCardsToDeal < 2; numberOfCardsToDeal++)
+            {
+                var card = deck[0];
+                Console.WriteLine("Firs player card: " + card);
+                //-remove that card from the deck list so we don't keep dealing it
+                deck.Remove(card);
+                Console.WriteLine(deck.Count);
+                //-call the 'add card' behavior of the hand and pass it this card
+                dealer.AddCard(card);
+                Console.WriteLine(dealer.CurrentCards.Count);
+            }
+            Console.WriteLine();
             //Ask the deck for a card and place it in the dealer hand
             //Show the plater the cards in their hand and the TotalValue of their Hand
             //If they have 'Busted' (hand TotalValue is > 27), then go to step 15.
