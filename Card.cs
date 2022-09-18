@@ -5,7 +5,26 @@ namespace BlackJack
 {
     public class Card
     {
-        //
+        //Class Card
+        // Properties: The face of the card. The suit of the card.
+        // Methods: Value of the card based on a table bellow:
+
+        // | Face  | Value |
+        // | ----- | ----- |
+        // | 2     | 2     |
+        // | 3     | 3     |
+        // | 4     | 4     |
+        // | 5     | 5     |
+        // | 6     | 6     |
+        // | 7     | 7     |
+        // | 8     | 8     |
+        // | 9     | 9     |
+        // | 10    | 10    |
+        // | Jack  | 10    |
+        // | Queen | 10    |
+        // | King  | 10    |
+        // | Ace   | 11    |
+
         //initialize
         //a card has a face, a suit and a value
         public string Face { get; set; }
