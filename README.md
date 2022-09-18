@@ -30,10 +30,59 @@ var deck = new List<string>() {
 "Ace of Clubs",
 "1 of Clubs", "2 of Clubs", "3 of Clubs", "4 of Clubs", "5 of Clubs", "6 of Clubs", "7 of Clubs", "8 of Clubs", "9 of Clubs", "10 of Clubs", "Jack of Clubs", "Queen of Clubs", "King of Clubs", "Ace of Hearts", "1 of Hearts", "2 of Hearts", "3 of Hearts", "4 of Hearts", "5 of Hearts", "6 of Hearts", "7 of Hearts", "8 of Hearts", "9 of Hearts", "10 of Hearts", "Jack of Hearts", "Queen of Hearts", "King of Hearts", "Ace of Spades", "1 of Spades", "2 of Spades", "3 of Spades", "4 of Spades", "5 of Spades", "6 of Spades", "7 of Spades", "8 of Spades", "9 of Spades", "10 of Spades", "Jack of Spades", "Queen of Spades", "King of Spades", "Ace of Diamonds", "1 of Diamonds", "2 of Diamonds", "3 of Diamonds", "4 of Diamonds", "5 of Diamonds", "6 of Diamonds", "7 of Diamonds", "8 of Diamonds", "9 of Diamonds", "10 of Diamonds", "Jack of Diamonds", "Queen of Diamonds", "King of Diamonds" };
 
+-Example Dog Bellow-
+Base Class: Dog
+Properties:
+Color, EyeColor, Height, Length, Weight.
+Methods: Sit, LayDown, Shake, Come.
+
+Object Instance: Rayne (A type Dog)
+PropertyValues:
+Color: Gray, White, and Black
+EyeColor: Blue and Brown
+Height: 18 in
+Length: 36 in
+Weight: 30 pounds
+
+Methods: Sit, LayDown, Shake, Come
+End of class dog and object instance of type Dog.
+
 ## [D]ata Structures:
 
 Looking at nouns and verbs:
-deck card hand
+
+-deck
+properties/states
+a list of 52 cards
+behaviors/methods
+make a new deck of 52 shuffled cards. deal one card out of the deck.
+
+-card
+properties/states
+the face of the card
+the suit of the card
+behaviors/methods
+the value of the card according to the table.
+
+-hand
+properties/states
+a list of individual cards
+behaviors/methods
+-TotalValue representing the sum of the individual Cards in the list.
+--Start with a total = 0;
+--For each card in the hand, do this: add the amount of that card's value to total.
+--return "total" as a result
+-Add a card to the hand.
+--Add the supplied card to the list of cards
+
+-player
+dealer and plater are instances of the Hand class
+properties/states
+behaviors/methods
+
+-dealer
+properties/states
+behaviors/methods
 
 deal total value receive
 
@@ -71,23 +120,6 @@ Classes and structures are members of namespaces. Think of namespaces as a way o
 
 Console applications always start with static Main() method (executable code).
 All code is placed inside a class or structure.
-
--Example Dog Bellow-
-Base Class: Dog
-Properties:
-Color, EyeColor, Height, Length, Weight.
-Methods: Sit, LayDown, Shake, Come.
-
-Object Instance: Rayne (A type Dog)
-PropertyValues:
-Color: Gray, White, and Black
-EyeColor: Blue and Brown
-Height: 18 in
-Length: 36 in
-Weight: 30 pounds
-
-Methods: Sit, LayDown, Shake, Come
-End of class dog and object instance of type Dog.
 
 Blackjack Classes
 Hand
@@ -148,3 +180,5 @@ Classes (blueprints) allow us to build our own data structures.
 Creating an object.
 Describing what it is like.
 When we create an object based on the class, we are creating an instance of the object.
+
+//not everything that has a behavior is a class
