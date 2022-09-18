@@ -22,6 +22,8 @@ Faces: "1", "2", "3", "4", "5", "6", "7". "8", "9", "10", "Jack", "Queen" and "K
 11-If dealer stands, playerHandCardsValue is unchanged.
 12-The two handCardsValues (playerHandCardsValue > dealerHandCardsValue or playerHandCardsValue < dealerHandCardsValue) are compared to see who is closer to 21 and therefore ends up being the winner.
 13-If there is a tide or both the dealer and the player have the same handCardsValue (playerHandCardsValue == dealerHandCardsValue), dealer wins.
+14-Once we have a winner, we show a message and restart the game by giving the options if the player wants to play again?
+15-If yes, we restart the game, if not, we exit game.
 
 ## [E]xamples:
 
