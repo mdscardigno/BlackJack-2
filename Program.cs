@@ -159,14 +159,15 @@ namespace Blackjack
 
             //another way to do this
             Console.WriteLine(String.Join(", ", player.CurrentCards));
-
+            //And the TotalValue of their hand
+            Console.WriteLine($"The total value of your hand is: {player.TotalValue()}");
             //     for every card, printout the to the user the description of the card
-            //If they have 'Busted' (hand TotalValue is > 27), then go to step 15.
-
-            //Ask the player if they want to HIT or STAND
-
-            //If HIT 
-            //If STAND
+            //10-If they have 'Busted' (hand TotalValue is > 27), then go to step 15.
+            //11-Ask the player if they want to HIT or STAND
+            //12-If HIT 
+            //  -Ask the deck for a card and place it in the player hand, repeat step 10
+            //13-If STAND then continue on
+            //14-
 
         }
         static void DisplayGreeting()
