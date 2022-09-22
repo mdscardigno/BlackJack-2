@@ -44,7 +44,7 @@ namespace BlackJack
                 case "8":
                 case "9":
                 case "10":
-                    return int.Parse(Face);
+                    return int.Parse(Face);//it returns an integer
                 case "Jack":
                 case "Queen":
                 case "King":
