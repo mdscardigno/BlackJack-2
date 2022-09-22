@@ -30,6 +30,7 @@ namespace BlackJack
         public string Face { get; set; }
         public string Suit { get; set; }
         //to assign value to each of the cards
+        //Cards know what the value of each card is.
         public int Value()
         {
             switch (Face)
