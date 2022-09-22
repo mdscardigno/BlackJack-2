@@ -75,6 +75,8 @@ namespace Blackjack
                                         // Console.WriteLine($"The {card.Face} of {card.Suit}");
             };
 
+            Console.WriteLine();
+
             //Create a player hand
             var player = new Hand();
 
@@ -84,21 +86,23 @@ namespace Blackjack
             //-the card is equal the 0th index of the deck
 
             //refactor
+            Console.WriteLine("***********Let's deal some cards!***********");
+            Console.WriteLine();
             for (var numberOfCardsToDeal = 0; numberOfCardsToDeal < 2; numberOfCardsToDeal++)
             {
                 var card = deck[0];
-                Console.WriteLine("Firs player card: " + card);
+                Console.WriteLine("Player has been deal: " + card);
                 //-remove that card from the deck list so we don't keep dealing it
                 deck.Remove(card);
                 Console.WriteLine(deck.Count);
                 //-call the 'add card' behavior of the hand and pass it this card
                 player.AddCard(card);
-                Console.WriteLine(player.CurrentCards.Count);
+                Console.WriteLine("And that was card number: " + player.CurrentCards.Count);
             }
 
             //******Start of old way of adding cards to the player
             // var firstPlayerCard = deck[0];
-            // Console.WriteLine("Firs player card: " + firstPlayerCard);
+            // Console.WriteLine("First player card: " + firstPlayerCard);
             // //-remove that card from the deck list so we don't keep dealing it
             // deck.Remove(firstPlayerCard);
             // Console.WriteLine(deck.Count);
@@ -119,15 +123,15 @@ namespace Blackjack
             for (var numberOfCardsToDeal = 0; numberOfCardsToDeal < 2; numberOfCardsToDeal++)
             {
                 var card = deck[0];
-                Console.WriteLine("Firs player card: " + card);
+                Console.WriteLine("Dealer has been dealt: " + card);
                 //-remove that card from the deck list so we don't keep dealing it
                 deck.Remove(card);
                 Console.WriteLine(deck.Count);
                 //-call the 'add card' behavior of the hand and pass it this card
                 dealer.AddCard(card);
-                // Console.WriteLine(dealer.CurrentCards.Count);
+                Console.WriteLine("And that was card number: " + dealer.CurrentCards.Count);
             }
-            // Console.WriteLine();
+            Console.WriteLine();
 
             //Show the player the cards in their hand and the TotalValue of their Hand
             //Loop through the list of cards in the player's hand
@@ -159,8 +163,14 @@ namespace Blackjack
 
             //another way to do this
             Console.WriteLine(String.Join(", ", player.CurrentCards));
-            //And the TotalValue of their hand
             Console.WriteLine($"The total value of your hand is: {player.TotalValue()}");
+
+            Console.WriteLine();
+
+            Console.WriteLine("Dealer, your cards are: ");
+            Console.WriteLine(String.Join(", ", dealer.CurrentCards));
+            //And the TotalValue of their hand
+            Console.WriteLine($"The total value of your hand is: {dealer.TotalValue()}");
             //     for every card, printout the to the user the description of the card
             //10-If they have 'Busted' (hand TotalValue is > 27), then go to step 15.
             //11-Ask the player if they want to HIT or STAND
