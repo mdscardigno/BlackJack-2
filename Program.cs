@@ -173,11 +173,34 @@ namespace Blackjack
             Console.WriteLine($"The total value of your hand is: {dealer.TotalValue()}");
             //     for every card, printout the to the user the description of the card
             //10-If they have 'Busted' (hand TotalValue is > 27), then go to step 15.
-            //11-Ask the player if they want to HIT or STAND
-            //12-If HIT 
-            //  -Ask the deck for a card and place it in the player hand, repeat step 10
-            //13-If STAND then continue on
-            //14-
+            if (player.TotalValue() <= 21)
+            {
+                //11-Ask the player if they want to HIT or STAND
+                System.Console.WriteLine("Do you want to 'HIT' or 'STAND'?");
+                var answer = Console.ReadLine();
+                //12-If HIT 
+                if (answer == "HIT")
+                {
+                    //  -Ask the deck for a card and place it in the player hand, repeat step 10
+                    var newCard = deck[0];
+                    deck.Remove(newCard);
+                    player.AddCard(newCard);
+
+                }//This is repeated behavior
+                System.Console.WriteLine($"You have {player.CurrentCards.Count} cards");
+                //13-If STAND then continue on
+
+            }
+            //14-If the dealer's hand TotalValue is more than 21 then go to step 17
+            //15-If the dealer's hand TotalValue is less than 17
+            //--Add card to the dealer hand and go back to step 14
+            //16-Show the dealer's hand TotalValue
+            //17-If the player's hand TotalValue > 21 display message: "Dealer Wins!"
+            //18-If the dealer's hand TotalValue is > 21 display message: "Player Wins!"
+            //19-If the dealer's hand TotalValue is more than the player's hand TotalValue, then display a message: "Dealer wins!", Else, display message: "Player Wins"
+            //20-If the value of the hands are even, display message: "Dealer wins!"
+
+
 
         }
         static void DisplayGreeting()
