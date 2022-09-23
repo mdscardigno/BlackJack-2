@@ -129,13 +129,13 @@ namespace Blackjack
                 Console.WriteLine(deck.Count);
                 //-call the 'add card' behavior of the hand and pass it this card
                 dealer.AddCard(card);
-                Console.WriteLine("And that was card number: " + dealer.CurrentCards.Count);
+                // Console.WriteLine("And that was card number: " + dealer.CurrentCards.Count);
             }
             Console.WriteLine();
 
-            //Show the player the cards in their hand and the TotalValue of their Hand
+            //9-Show the player the cards in their hand and the TotalValue of their Hand
             //Loop through the list of cards in the player's hand
-            Console.WriteLine("Player, your cards are: ");
+            // Console.WriteLine("Player, your cards are: ");
             // //using foreach
             // foreach (var card in player.CurrentCards)
             // {
@@ -162,22 +162,36 @@ namespace Blackjack
             // Console.WriteLine();
 
             //another way to do this
-            Console.WriteLine(String.Join(", ", player.CurrentCards));
-            Console.WriteLine($"The total value of your hand is: {player.TotalValue()}");
+            // Console.WriteLine(String.Join(", ", player.CurrentCards));
+            // Console.WriteLine($"The total value of your hand is: {player.TotalValue()}");
 
             Console.WriteLine();
 
-            Console.WriteLine("Dealer, your cards are: ");
-            Console.WriteLine(String.Join(", ", dealer.CurrentCards));
+            // Console.WriteLine("Dealer, your cards are: ");
+            // Console.WriteLine(String.Join(", ", dealer.CurrentCards));
             //And the TotalValue of their hand
-            Console.WriteLine($"The total value of your hand is: {dealer.TotalValue()}");
+            // Console.WriteLine($"The total value of your hand is: {dealer.TotalValue()}");
             //     for every card, printout the to the user the description of the card
             //10-If they have 'Busted' (hand TotalValue is > 27), then go to step 15.
-            if (player.TotalValue() <= 21)
+            var answer = "";
+            while (player.TotalValue() <= 21 && answer != "STAND")
             {
+                //9-Show the player the cards in their hand and the TotalValue of their Hand
+                //Loop through the list of cards in the player's hand
+                Console.WriteLine();
+                Console.WriteLine();
+                // Console.WriteLine($"You have {player.CurrentCards.Count} cards");
+                Console.WriteLine("Player, your cards are: ");
+                Console.WriteLine(String.Join(", ", player.CurrentCards));
+
+                //and the TotalValue if their Hand
+                Console.WriteLine($"The total value of your hand is: {player.TotalValue()}");
+                Console.WriteLine();
+                Console.WriteLine();
+
                 //11-Ask the player if they want to HIT or STAND
-                System.Console.WriteLine("Do you want to 'HIT' or 'STAND'?");
-                var answer = Console.ReadLine();
+                Console.WriteLine("Do you want to 'HIT' or 'STAND'?");
+                answer = Console.ReadLine().ToUpper();
                 //12-If HIT 
                 if (answer == "HIT")
                 {
@@ -187,7 +201,7 @@ namespace Blackjack
                     player.AddCard(newCard);
 
                 }//This is repeated behavior
-                System.Console.WriteLine($"You have {player.CurrentCards.Count} cards");
+
                 //13-If STAND then continue on
 
             }
