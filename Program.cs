@@ -93,7 +93,7 @@ namespace Blackjack
                 var card = deck[0];
                 Console.WriteLine("Player has been deal: " + card);
                 //-remove that card from the deck list so we don't keep dealing it
-                deck.Remove(card);
+                deck.Remove(card);//we are always going to be taking the top card
                 Console.WriteLine(deck.Count);
                 //-call the 'add card' behavior of the hand and pass it this card
                 player.AddCard(card);
@@ -101,20 +101,20 @@ namespace Blackjack
             }
 
             //******Start of old way of adding cards to the player
-            // var firstPlayerCard = deck[0];
-            // Console.WriteLine("First player card: " + firstPlayerCard);
+            // var firstPlayerCards = deck[0];
+            // Console.WriteLine("First player card: " + firstPlayerCards);
             // //-remove that card from the deck list so we don't keep dealing it
-            // deck.Remove(firstPlayerCard);
+            // deck.Remove(firstPlayerCards);
             // Console.WriteLine(deck.Count);
             // //-call the 'add card' behavior of the hand and pass it this card
-            // player.AddCard(firstPlayerCard);
+            // player.AddCard(firstPlayerCards);
             // // Console.WriteLine(player.CurrentCards.Count);
 
             //Ask the deck for a card and place it in the player hand
-            // var secondPlayerCard = deck[0];
-            // Console.WriteLine("Second player card: " + secondPlayerCard);
-            // deck.Remove(secondPlayerCard);
-            // player.AddCard(secondPlayerCard);
+            // var secondPlayerCards = deck[0];
+            // Console.WriteLine("Second player card: " + secondPlayerCards);
+            // deck.Remove(secondPlayerCards);
+            // player.AddCard(secondPlayerCards);
             // Console.WriteLine(player.CurrentCards.Count);
             //*****End of old way of adding cards to the player
 
