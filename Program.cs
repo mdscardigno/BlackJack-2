@@ -6,6 +6,19 @@ namespace Blackjack
 {
     class Program
     {
+        static void DisplayGreeting()
+        {
+            Console.WriteLine("🂡 Welcome to Blackjack. \nThe first player to come closer to 21 or at 21 wins! Those who go over 21 loose. 🃁");
+            Console.WriteLine("Press any key to play.");
+            string pressToStartPlaying = Console.ReadLine();
+        }
+        static List<Card> BuildTheDeck()
+        {
+            var newDeck = new List<Card>();
+            //code for the deck
+            return newDeck;
+
+        }
         //static methods are any methods that does not require an instance of the class; for example: new Program. 
         static void PlayTheGame()
         {
@@ -47,6 +60,7 @@ namespace Blackjack
                     deck.Add(newCard);
                 }
             }
+
             //Ask the deck to make a new shuffled 52 cards
 
             //FISHER YATES ALGORITHM 
@@ -76,7 +90,6 @@ namespace Blackjack
                                         //But if we didn't have the ToString()
                                         // Console.WriteLine($"The {card.Face} of {card.Suit}");
             };
-
             Console.WriteLine();
 
             //Create a player hand
@@ -268,12 +281,7 @@ namespace Blackjack
 
 
         }
-        static void DisplayGreeting()
-        {
-            Console.WriteLine("🂡 Welcome to Blackjack. \nThe first player to come closer to 21 or at 21 wins! Those who go over 21 loose. 🃁");
-            Console.WriteLine("Press any key to play.");
-            string pressToStartPlaying = Console.ReadLine();
-        }
+
         static void Main(string[] args)
         {
             while (true)
