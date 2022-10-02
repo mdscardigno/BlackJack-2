@@ -46,5 +46,27 @@ namespace BlackJack
             CurrentCards.Add(cardToAdd);
         }
 
+        public void PrintCardsAndTotal(string handName)
+        {
+            Console.WriteLine();
+            Console.WriteLine();
+
+            // Console.WriteLine($"You have {player.CurrentCards.Count} cards");
+            Console.WriteLine($"{handName}, your cards are: ");
+
+            // Console.WriteLine(String.Join(", ", player.CurrentCards)); 
+            //I no longer need an instance of the variable because I am a Hand. So I have my own CurrentCards and I have my own TotalValue
+            //When I was outside of the class, I needed to ask, which hand did I want?
+            //Look at the breadcrumb bars in Visual Studio Code
+            Console.WriteLine(String.Join(", ", CurrentCards));
+            //the Hand does not know which player I am so it seems that this is going to need to come
+            //from the outside world
+
+            //and the TotalValue if their Hand
+            Console.WriteLine($"The total value of your hand is: {TotalValue()}");
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
     }
 }
