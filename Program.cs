@@ -23,7 +23,7 @@ namespace Blackjack
             //Suits is a list of "Club", "Diamond", "Heart", or "Spade"
             var suits = new List<string>() { "Club", "Diamond", "Hearts", "Spades" };
             //Faces is a list of 2,3,4,5,6,7,8,9,10,Jack. Queen, King or Ace.
-            var faces = new List<string>() { "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
+            var faces = new List<string>() { "Ace", "2", "3", "4", "5", "6", "7", "8", "9", "10", "Jack", "Queen", "King" };
 
             //Go trough all of the suits one at a time and in order.
             //Get the current suit
@@ -80,10 +80,10 @@ namespace Blackjack
             Console.WriteLine();
 
             //Create a player hand
-            var player = new Hand();
+            var player = new Hand();//new instance of the class Hand
 
             //Create a dealer hand
-            var dealer = new Hand();
+            var dealer = new Hand(); //another instance of the class Hand
             //Ask the deck for a card and place it in the player hand (and may mean two steps)
             //-the card is equal the 0th index of the deck
 
@@ -93,14 +93,15 @@ namespace Blackjack
             for (var numberOfCardsToDeal = 0; numberOfCardsToDeal < 2; numberOfCardsToDeal++)
             {
                 var card = deck[0];
-                Console.WriteLine("Player has been deal: " + card);
+                // Console.WriteLine("Player has been deal: " + card);
                 //-remove that card from the deck list so we don't keep dealing it
                 deck.Remove(card);//we are always going to be taking the top card
                 Console.WriteLine(deck.Count);
                 //-call the 'add card' behavior of the hand and pass it this card
                 player.AddCard(card);
-                Console.WriteLine("And that was card number: " + player.CurrentCards.Count);
+                // Console.WriteLine("And that was card number: " + player.CurrentCards.Count);
             }
+            Console.WriteLine();
 
             //******Start of old way of adding cards to the player
             // var firstPlayerCards = deck[0];
@@ -125,7 +126,6 @@ namespace Blackjack
             for (var numberOfCardsToDeal = 0; numberOfCardsToDeal < 2; numberOfCardsToDeal++)
             {
                 var card = deck[0];
-                Console.WriteLine("Dealer has been dealt: " + card);
                 //-remove that card from the deck list so we don't keep dealing it
                 deck.Remove(card);
                 Console.WriteLine(deck.Count);
@@ -239,14 +239,14 @@ namespace Blackjack
             //17-If the player's hand TotalValue > 21 display message: "Dealer Wins!"
             if (player.TotalValue() > 21)
             {
-                Console.WriteLine("Player, you busted.");
+                Console.WriteLine("Player, you busted 😕.");
                 Console.WriteLine("Dealer wins!");
             }
             else
             //18-If the dealer's hand TotalValue is > 21 display message: "Player Wins!"
             if (dealer.TotalValue() > 21)
             {
-                Console.WriteLine("Dealer busted.");
+                Console.WriteLine("Dealer busted 😕.");
                 Console.WriteLine("Player Wins!");
             }
             else
@@ -281,6 +281,15 @@ namespace Blackjack
             {
                 //I do not have to do Program.PlayTheGame(); I can just call it directly
                 PlayTheGame();
+
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Would you like to play the game again?");
+                var answer = Console.ReadLine().ToUpper();
+                if (answer == "NO" || answer == "n")
+                {
+                    break;// will end the most inner loop
+                }
             }
 
         }
