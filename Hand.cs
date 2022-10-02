@@ -49,7 +49,6 @@ namespace BlackJack
         public void PrintCardsAndTotal(string handName)
         {
             Console.WriteLine();
-            Console.WriteLine();
 
             // Console.WriteLine($"You have {player.CurrentCards.Count} cards");
             Console.WriteLine($"{handName}, your cards are: ");
@@ -64,7 +63,6 @@ namespace BlackJack
 
             //and the TotalValue if their Hand
             Console.WriteLine($"The total value of your hand is: {TotalValue()}");
-            Console.WriteLine();
             Console.WriteLine();
         }
 
