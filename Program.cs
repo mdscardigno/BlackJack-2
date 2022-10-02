@@ -14,9 +14,10 @@ namespace Blackjack
         }
         static List<Card> BuildDeck()
         {
-            var theDeckWeAreCurrentlyBuilding = new List<Card>();
+            //I call BuildDeck. It builds a variable called theDeckWeAreCurrentlyBuilding, we build it and then it gets returned and it is received by theDeckWeJustBuilt variable in Main() 
+            var theDeckWeAreCurrentlyBuilding = new List<Card>(); //producing information
             //code for the deck
-            return theDeckWeAreCurrentlyBuilding;
+            return theDeckWeAreCurrentlyBuilding;//returning output
 
         }
         //static methods are any methods that does not require an instance of the class; for example: new Program. 
@@ -284,7 +285,7 @@ namespace Blackjack
 
         static void Main(string[] args)
         {
-            var theDeckWeJustBuilt = BuildDeck();
+            var theDeckWeJustBuilt = BuildDeck();//we are accepting the output as a list
             Console.WriteLine(theDeckWeJustBuilt.Count);
             while (true)
             {
