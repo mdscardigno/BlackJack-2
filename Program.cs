@@ -12,6 +12,7 @@ namespace Blackjack
             Console.WriteLine("Press any key to play.");
             string pressToStartPlaying = Console.ReadLine();
         }
+        //example of a method to build a deck
         static List<Card> BuildDeck()
         {
             //I call BuildDeck. It builds a variable called theDeckWeAreCurrentlyBuilding, we build it and then it gets returned and it is received by theDeckWeJustBuilt variable in Main() 
@@ -113,6 +114,7 @@ namespace Blackjack
                 //-call the 'add card' behavior of the hand and pass it this card
                 player.AddCard(card);
                 // Console.WriteLine("And that was card number: " + player.CurrentCards.Count);
+                // player.AddCard(new Card() {Face = "Ace", Suit = "Blah"});
             }
             // Console.WriteLine();
 
@@ -285,6 +287,7 @@ namespace Blackjack
 
         static void Main(string[] args)
         {
+            //Deck building in a method
             var theDeckWeJustBuilt = BuildDeck();//we are accepting the output as a list
             Console.WriteLine(theDeckWeJustBuilt.Count);
             while (true)
@@ -298,6 +301,7 @@ namespace Blackjack
                 var answer = Console.ReadLine().ToUpper();
                 if (answer == "NO" || answer == "n")
                 {
+                    Console.WriteLine("Goodbye...");
                     break;// will end the most inner loop
                 }
             }

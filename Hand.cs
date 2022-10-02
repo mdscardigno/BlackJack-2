@@ -58,7 +58,7 @@ namespace BlackJack
             //from the outside world
 
             //and the TotalValue if their Hand
-            Console.WriteLine($"The total value of {handName}\'s hand is: {TotalValue()}");
+            Console.WriteLine($"The total value of the {handName}\'s hand is: {TotalValue()}");
             Console.WriteLine();
         }
 
