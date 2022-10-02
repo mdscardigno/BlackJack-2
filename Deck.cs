@@ -13,5 +13,6 @@ namespace BlackJack
 
         //shuffle() the deck
         //deal() that takes the first card out of the list, removes it and gives it back to the player/dealer.
+
     }
 }

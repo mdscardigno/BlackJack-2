@@ -12,11 +12,11 @@ namespace Blackjack
             Console.WriteLine("Press any key to play.");
             string pressToStartPlaying = Console.ReadLine();
         }
-        static List<Card> BuildTheDeck()
+        static List<Card> BuildDeck()
         {
-            var newDeck = new List<Card>();
+            var theDeckWeAreCurrentlyBuilding = new List<Card>();
             //code for the deck
-            return newDeck;
+            return theDeckWeAreCurrentlyBuilding;
 
         }
         //static methods are any methods that does not require an instance of the class; for example: new Program. 
@@ -284,6 +284,8 @@ namespace Blackjack
 
         static void Main(string[] args)
         {
+            var theDeckWeJustBuilt = BuildDeck();
+            Console.WriteLine(theDeckWeJustBuilt.Count);
             while (true)
             {
                 //I do not have to do Program.PlayTheGame(); I can just call it directly

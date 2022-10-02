@@ -6,7 +6,6 @@ namespace BlackJack
 {
     public class Hand
     {
-
         // Hand Class: has a collection of two cards.
 
         // Properties/States
