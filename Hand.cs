@@ -48,11 +48,8 @@ namespace BlackJack
 
         public void PrintCardsAndTotal(string handName)
         {
-            Console.WriteLine();
-
             // Console.WriteLine($"You have {player.CurrentCards.Count} cards");
             Console.WriteLine($"{handName}, your cards are: ");
-
             // Console.WriteLine(String.Join(", ", player.CurrentCards)); 
             //I no longer need an instance of the variable because I am a Hand. So I have my own CurrentCards and I have my own TotalValue
             //When I was outside of the class, I needed to ask, which hand did I want?

@@ -18,7 +18,7 @@ namespace Blackjack
             var deck = new List<Card>();
 
             //test debug line of code
-            Console.WriteLine(deck.Count);//starts with the count of zero
+            // Console.WriteLine(deck.Count);//starts with the count of zero
 
             //Suits is a list of "Club", "Diamond", "Heart", or "Spade"
             var suits = new List<string>() { "Club", "Diamond", "Hearts", "Spades" };
@@ -89,19 +89,18 @@ namespace Blackjack
 
             //refactor
             Console.WriteLine("***********Let's deal some cards!***********");
-            Console.WriteLine();
             for (var numberOfCardsToDeal = 0; numberOfCardsToDeal < 2; numberOfCardsToDeal++)
             {
                 var card = deck[0];
                 // Console.WriteLine("Player has been deal: " + card);
                 //-remove that card from the deck list so we don't keep dealing it
                 deck.Remove(card);//we are always going to be taking the top card
-                Console.WriteLine(deck.Count);
+                // Console.WriteLine(deck.Count);
                 //-call the 'add card' behavior of the hand and pass it this card
                 player.AddCard(card);
                 // Console.WriteLine("And that was card number: " + player.CurrentCards.Count);
             }
-            Console.WriteLine();
+            // Console.WriteLine();
 
             //******Start of old way of adding cards to the player
             // var firstPlayerCards = deck[0];
@@ -128,7 +127,7 @@ namespace Blackjack
                 var card = deck[0];
                 //-remove that card from the deck list so we don't keep dealing it
                 deck.Remove(card);
-                Console.WriteLine(deck.Count);
+                // Console.WriteLine(deck.Count);
                 //-call the 'add card' behavior of the hand and pass it this card
                 dealer.AddCard(card);
                 // Console.WriteLine("And that was card number: " + dealer.CurrentCards.Count);
