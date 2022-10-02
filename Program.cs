@@ -235,12 +235,35 @@ namespace Blackjack
             //REPLACED WITH
             dealer.PrintCardsAndTotal("Dealer");
             //17-If the player's hand TotalValue > 21 display message: "Dealer Wins!"
+            if (player.TotalValue() > 21)
+            {
+                Console.WriteLine("Dealer wins!");
+            }
+            else
             //18-If the dealer's hand TotalValue is > 21 display message: "Player Wins!"
+            if (dealer.TotalValue() > 21)
+            {
+                Console.WriteLine("Player Wins!");
+            }
+            else
             //19-If the dealer's hand TotalValue is more than the player's hand TotalValue, then display a message: "Dealer wins!", Else, display message: "Player Wins"
+            if (dealer.TotalValue() > player.TotalValue())
+            {
+                Console.WriteLine("Dealer Wins!");
+            }
+            else
+            if (player.TotalValue() > dealer.TotalValue())
+            {
+                Console.WriteLine("Player Wins!");
+            }
             //20-If the value of the hands are even, display message: "Dealer wins!"
-
+            if (player.TotalValue() == dealer.TotalValue())
+            {
+                Console.WriteLine("Dealer Wins Tides!");
+            }
 
         }
+
         static void DisplayGreeting()
         {
             Console.WriteLine("🂡 Welcome to Blackjack. \nThe first player to come closer to 21 or at 21 wins! Those who go over 21 loose. 🃁");
