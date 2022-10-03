@@ -32,8 +32,7 @@ namespace Blackjack
             //after moving old code for creating the deck to the deck class we change the code of creating a new deck to:
             var deck = new Deck();
             //Initialize the deck
-            deck.Initialize();
-            deck.Shuffle();
+
 
             //Create a new player
 

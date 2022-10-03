@@ -13,6 +13,14 @@ namespace BlackJack
         //
         public List<Card> Cards { get; set; } = new List<Card>();
         //Behaviors: 
+        //1-Initialize the deck
+
+        //Every time we 'new Deck()' please initialize the deck and shuffle it.
+        public Deck()
+        {
+            Initialize();
+            Shuffle();
+        }
         //initialize a deck of 52 cards
         public void Initialize()
         {
