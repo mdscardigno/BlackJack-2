@@ -6,6 +6,30 @@ namespace Blackjack
 {
     class Program
     {
+
+        static void Main(string[] args)
+        {
+            //Deck building in a method
+            var theDeckWeJustBuilt = BuildDeck();//we are accepting the output as a list
+            Console.WriteLine(theDeckWeJustBuilt.Count);
+            while (true)
+            {
+                //I do not have to do Program.PlayTheGame(); I can just call it directly
+                PlayTheGame();
+
+                Console.WriteLine();
+                Console.WriteLine();
+                Console.WriteLine("Would you like to play the game again?");
+                var answer = Console.ReadLine().ToUpper();
+                if (answer == "NO" || answer == "n")
+                {
+                    Console.WriteLine("Goodbye...👋");
+                    break;// will end the most inner loop
+                }
+            }
+
+        }
+
         static void DisplayGreeting()
         {
             Console.WriteLine("♥️♦️♣️♠️ Welcome to Blackjack ♥️♦️♣️♠️ \nThe first player to come closer to 21 or at 21 wins! Those who go over 21 loose. ");
@@ -130,29 +154,6 @@ namespace Blackjack
             }
             Console.WriteLine();
 
-
-        }
-
-        static void Main(string[] args)
-        {
-            //Deck building in a method
-            var theDeckWeJustBuilt = BuildDeck();//we are accepting the output as a list
-            Console.WriteLine(theDeckWeJustBuilt.Count);
-            while (true)
-            {
-                //I do not have to do Program.PlayTheGame(); I can just call it directly
-                PlayTheGame();
-
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("Would you like to play the game again?");
-                var answer = Console.ReadLine().ToUpper();
-                if (answer == "NO" || answer == "n")
-                {
-                    Console.WriteLine("Goodbye...👋");
-                    break;// will end the most inner loop
-                }
-            }
 
         }
     }
