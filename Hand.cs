@@ -45,6 +45,35 @@ namespace BlackJack
             CurrentCards.Add(cardToAdd);
         }
 
+        //add multiple cards to the hand.
+        public void AddCards(List<Card> cardsToAdd)
+        {
+            //loop through the list of cards
+            foreach (Card card in cardsToAdd)
+            {
+                //for every card in cards to add, call addCard to add it.
+                AddCard(card);
+            }
+        }
+
+        //NotBusted
+        public bool NotBusted()
+        {
+            return !Busted();
+        }
+        //if value is greater than 21
+        public bool Busted()
+        {
+            if (TotalValue() > 21)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public void PrintCardsAndTotal(string handName)
         {
             // Console.WriteLine($"You have {player.CurrentCards.Count} cards");

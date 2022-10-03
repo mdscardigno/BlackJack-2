@@ -79,16 +79,20 @@ namespace BlackJack
             Cards.RemoveAt(0);
             return topCard;
         }
-        //
-        //
-        //Player is just an instance of the Hand class.
-        //Dealer is just an instance of the Hand class.
 
-        //what can a deck do?
-        //build() fills the list with 52 cards
-
-        //shuffle() the deck
-        //deal() that takes the first card out of the list, removes it and gives it back to the player/dealer.
-
+        //Deal multiple cards
+        public List<Card> DealMultipleCards(int numberOfCardsToDeal)
+        {
+            var multipleCards = new List<Card>();
+            for (int count = 0; count < numberOfCardsToDeal; count++)
+            {
+                //Reusing Deal() Method
+                Card dealtCard = Deal();
+                multipleCards.Add(dealtCard);
+            }
+            return multipleCards;
+        }
+        //player is just an instance of the Hand class
+        //dealer is just an instance of the Hand class
     }
 }
