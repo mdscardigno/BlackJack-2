@@ -64,25 +64,27 @@ namespace BlackJack
         //if value is greater than 21
         public bool Busted()
         {
-            if (TotalValue() > 21)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return TotalValue() > 21;
+            // if (TotalValue() > 21)
+            // {
+            //     return true;
+            // }
+            // else
+            // {
+            //     return false;
+            // }
         }
         public bool DealerShouldHit()
         {
-            if (TotalValue() <= 17)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return TotalValue() < 17;
+            // if (TotalValue() <= 17)
+            // {
+            //     return true;
+            // }
+            // else
+            // {
+            //     return false;
+            // }
         }
 
         public void PrintCardsAndTotal(string handName)
