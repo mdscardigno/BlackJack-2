@@ -8,7 +8,7 @@ namespace Blackjack
     {
         static void DisplayGreeting()
         {
-            Console.WriteLine("🂡 Welcome to Blackjack. \nThe first player to come closer to 21 or at 21 wins! Those who go over 21 loose. 🃁");
+            Console.WriteLine("♥️♦️♣️♠️ Welcome to Blackjack ♥️♦️♣️♠️ \nThe first player to come closer to 21 or at 21 wins! Those who go over 21 loose. ");
             Console.WriteLine("Press any key to play.");
             string pressToStartPlaying = Console.ReadLine();
         }
@@ -29,11 +29,17 @@ namespace Blackjack
             //Welcome message and description about the game.
             DisplayGreeting();
 
-            //Make a list of cards - give it a name of 'deck'
-            var deck = new List<Card>();
-
+            //after moving old code for creating the deck to the deck class we change the code of creating a new deck to:
+            var temporaryDeck = new Deck();
+            //Initialize the deck
+            temporaryDeck.Initialize();
+            temporaryDeck.Shuffle();
             //test debug line of code
             // Console.WriteLine(deck.Count);//starts with the count of zero
+
+            //Make a list of cards - give it a name of 'deck'
+            var deck = new List<Card>();
+            //moved old code to the Deck class into the Initialize method
 
             //Suits is a list of "Club", "Diamond", "Heart", or "Spade"
             var suits = new List<string>() { "Club", "Diamond", "Hearts", "Spades" };
@@ -62,7 +68,6 @@ namespace Blackjack
                     deck.Add(newCard);
                 }
             }
-
             //Ask the deck to make a new shuffled 52 cards
 
             //FISHER YATES ALGORITHM 
@@ -182,8 +187,6 @@ namespace Blackjack
             // Console.WriteLine(String.Join(", ", player.CurrentCards));
             // Console.WriteLine($"The total value of your hand is: {player.TotalValue()}");
 
-            Console.WriteLine();
-
             // Console.WriteLine("Dealer, your cards are: ");
             // Console.WriteLine(String.Join(", ", dealer.CurrentCards));
             //And the TotalValue of their hand
@@ -212,6 +215,7 @@ namespace Blackjack
 
                 //11-Ask the player if they want to HIT or STAND
                 Console.WriteLine("Do you want to 'HIT' or 'STAND'?");
+                Console.WriteLine();
                 answer = Console.ReadLine().ToUpper();
                 //12-If HIT 
                 if (answer == "HIT")
@@ -262,7 +266,7 @@ namespace Blackjack
             if (dealer.TotalValue() > 21)
             {
                 Console.WriteLine("Dealer busted 😕.");
-                Console.WriteLine("Player Wins!");
+                Console.WriteLine("Player Wins!🥳");
             }
             else
             //19-If the dealer's hand TotalValue is more than the player's hand TotalValue, then display a message: "Dealer wins!", Else, display message: "Player Wins"
@@ -273,7 +277,7 @@ namespace Blackjack
             else
             if (player.TotalValue() > dealer.TotalValue())
             {
-                Console.WriteLine("Player Wins!");
+                Console.WriteLine("Player Wins!🥳");
             }
             //20-If the value of the hands are even, display message: "Dealer wins!"
             if (player.TotalValue() == dealer.TotalValue())
@@ -301,7 +305,7 @@ namespace Blackjack
                 var answer = Console.ReadLine().ToUpper();
                 if (answer == "NO" || answer == "n")
                 {
-                    Console.WriteLine("Goodbye...");
+                    Console.WriteLine("Goodbye...👋");
                     break;// will end the most inner loop
                 }
             }
