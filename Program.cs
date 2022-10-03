@@ -81,17 +81,12 @@ namespace Blackjack
                 //13-If STAND then continue on
 
             }
-            //OLD CODE
-            // Console.WriteLine($"Player, the total value of your hand is: {player.TotalValue()}");
-            // Console.WriteLine("Player, your cards were: ");
-            // Console.WriteLine(String.Join(", ", player.CurrentCards));
-            // Console.WriteLine();
-            //REPLACED WITH
+            //Prints total value of the player's hand
             player.PrintCardsAndTotal("Player");
 
             //14-If the dealer's hand TotalValue is more than 21 then go to step 17
             //15-If the dealer's hand TotalValue is less than 17
-            while (player.NotBusted() && dealer.TotalValue() <= 17)
+            while (player.NotBusted() && dealer.DealerShouldHit())
             {
                 //--Add card to the dealer hand and go back to step 14
                 Card card = deck.Deal();

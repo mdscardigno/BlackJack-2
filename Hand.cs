@@ -73,6 +73,17 @@ namespace BlackJack
                 return false;
             }
         }
+        public bool DealerShouldHit()
+        {
+            if (TotalValue() <= 17)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
         public void PrintCardsAndTotal(string handName)
         {
